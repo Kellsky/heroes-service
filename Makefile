@@ -7,7 +7,7 @@ dev: build run
 ##### BUILD
 build:
 	@echo "Build ..."
-	@dep ensure
+	@go mod tidy
 	@go build
 	@echo "Build done"
 
@@ -25,7 +25,7 @@ env-down:
 ##### RUN
 run:
 	@echo "Start app ..."
-	@./heroes-service
+	@./herochain
 
 ##### CLEAN
 clean: env-down
